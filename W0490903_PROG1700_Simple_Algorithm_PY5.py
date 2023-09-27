@@ -4,7 +4,7 @@ Student ID: W0490903
 Course: PROG1700
 Date: 2023-09-25
 Project: Create a simple Algorithm using the program Flowchart and pseudocode
-Repository: https://github.com/users/W0490903/projects/1
+Repository: https://github.com/W0490903/Coding/blob/main/W0490903_PROG1700_Simple_Algorithm_PY5.py
 Programming Language: Python 3
 License: Creative Commons
 Version: 1.0
@@ -28,6 +28,7 @@ def get_integer_input(prompt):
         except ValueError:
             print("Please enter a valid number!")
 
+#Loops this snippet of code.
 while True:
     # Ask user to input current age.
     age_input = get_integer_input("Enter your age as a number: ")
