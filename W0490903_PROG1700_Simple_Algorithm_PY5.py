@@ -4,7 +4,7 @@ Student ID: W0490903
 Course: PROG1700
 Date: 2023-09-25
 Project: Create a simple Algorithm using the program Flowchart and pseudocode
-Repository: https://github.com/W0490903/Coding/blob/main/W0490903_PROG1700_Simple_Algorithm_PY5.py
+Repository: https://github.com/W0490903/PROG1700/blob/main/W0490903_PROG1700_Simple_Algorithm_PY5.py
 Programming Language: Python 3
 License: Creative Commons
 Version: 1.0
