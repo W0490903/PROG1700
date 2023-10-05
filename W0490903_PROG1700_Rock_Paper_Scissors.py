@@ -13,14 +13,24 @@ Version: 2.0
 # Import the "random" module.
 import random
 
+# Define a global variable that limits the maximum number of invalid attempts.
+max_invalid_attempts = 3
+
 # Define a function that validates the user's input.
 def get_user_choice():
+    # Indicates the intial amount of invalid inputs.
+    invalid_attempts = 0
     while True:
         user_choice = input("Rock, Paper, Scissors?: ").lower()
         if user_choice in ["rock", "paper", "scissors"]:
             return user_choice
         else:
-            print("Please choose a valid selection!")
+            # Add one to the number of invalid attempts.
+            invalid_attempts += 1
+            print(f"Please choose a valid selection! Attempts Left: {max_invalid_attempts - invalid_attempts}")
+            # If the invalid inputs equals 3, the program exits.
+            if invalid_attempts == max_invalid_attempts:
+                exit()
 
 # Define a function that validates the bot's input.
 def get_bot_choice():
@@ -56,4 +66,4 @@ while True:
     replay = input("Would you like to play again? (yes/no): ").lower()
     if replay != "yes":
         print("Thanks for playing!")
-        break
+        exit()
