@@ -4,7 +4,7 @@ Student ID: W0490903
 Course: PROG1700
 Date: 2023-10-05
 Project: Rock, Paper, Scissors 
-Repository: https://github.com/W0490903/PROG1700/blob/main/W0490903_PROG1700_Simple_Algorithm_PY5.py
+Repository: https://github.com/W0490903/PROG1700/blob/main/W0490903_PROG1700_Rock_Paper_Scissors.py
 Programming Language: Python 3
 License: Creative Commons
 Version: 2.0
