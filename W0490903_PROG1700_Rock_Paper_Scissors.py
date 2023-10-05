@@ -13,7 +13,6 @@ Version: 2.0
 # Import the "random" module.
 import random
 
-
 # Define a function that validates the user's input.
 def get_user_choice():
     while True:
@@ -23,11 +22,9 @@ def get_user_choice():
         else:
             print("Please choose a valid selection!")
 
-
 # Define a function that validates the bot's input.
 def get_bot_choice():
     return random.choice(["rock", "paper", "scissors"])
-
 
 def winner(user_choice, bot_choice):
     # If the user's choice is the same as the bot, the value returned is a tie.
@@ -42,7 +39,6 @@ def winner(user_choice, bot_choice):
         return "You Win!"
     else:
         return "Opponent Wins!"
-
 
 # Wraps the code in a while loop.
 while True:
