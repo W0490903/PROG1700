@@ -7,7 +7,7 @@ Project: Rock, Paper, Scissors
 Repository: https://github.com/W0490903/PROG1700/blob/main/W0490903_PROG1700_Rock_Paper_Scissors.py
 Programming Language: Python 3
 License: Creative Commons
-Version: 2.0
+Version: 2.1
 """
 
 # Import the "random" module.
