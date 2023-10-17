@@ -69,7 +69,7 @@ def winner(user_choice, bot_choice):
     if user_choice is None:
         return "You have no attempts left."
     if user_choice == bot_choice:
-        return "That's correct!"
+        return f"That's correct! You guessed the answer in {max_invalid_attempts - invalid_attempts} attempt(s)!"
     elif user_choice > bot_choice:
             invalid_attempts += 1
             return f"Nope, try lower. You have {max_invalid_attempts - invalid_attempts} attempts remaining."
@@ -100,7 +100,7 @@ while replay == "yes":
         if user_choice is not None:
             result = winner(user_choice, bot_choice)
             print(result)
-            if result == "That's correct!":
+            if result == f"That's correct! You guessed the answer in {max_invalid_attempts - invalid_attempts} attempt(s)!":
                 break
             else:
                 guesses -= 1
