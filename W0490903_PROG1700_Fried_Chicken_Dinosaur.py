@@ -52,10 +52,6 @@ while friedchicken_remaining > 0:
         print(f"Chicken eaten today: {friedchicken_eaten:.2f}")
         friedchicken_remaining = friedchicken_remaining - friedchicken_eaten
         print(f"Chicken remaining: {friedchicken_remaining:.2f}")
-        if friedchicken_remaining < 0:
-            friedchicken_remaining = 0
-            days == days
-            break
         friedchicken_eaten += 0.05
         days += 1
     # On the seventh day, the dinosaur does not eat any chicken.
