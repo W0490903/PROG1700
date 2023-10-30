@@ -55,10 +55,10 @@ while friedchicken_remaining > 0:
     # On the seventh day, the dinosaur does not eat any chicken.
     elif days == 7:
         days += 1
-        print(f"It is day 7 and I have a tummy ache. I can't eat anything today.\n")
+        print("It is day 7 and I have a tummy ache. I can't eat anything today.\n")
     # On day sixteen, he eats the last of his chicken, so this sets the amount remaining to zero.
     elif days == 16:
-        print(f"It is day {days} and I'm Hungry. Let's Eat!\nChicken eaten today: 1.45\nChicken remaining: 0\n")
+        print("It is day 16 and I'm Hungry. Let's Eat!\nChicken eaten today: 1.45\nChicken remaining: 0\n")
         friedchicken_remaining = 0
         
 # If the dinosaur runs out of chicken, prints the current day, and tells user that he has run out.
