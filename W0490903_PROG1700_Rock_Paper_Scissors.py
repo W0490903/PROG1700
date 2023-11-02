@@ -63,7 +63,7 @@ while True:
 
     # Asks the user if they would like to replay. If "yes" or "Yes", the loop replays.
     # If they respond with anything other than "yes" or "Yes", the program breaks.
-    replay = input("Would you like to play again? (yes/no): ").lower()
+    replay = input("Would you like to play again? (yes/no): ").lower().strip()
     if replay != "yes":
         print("Thanks for playing!")
         exit()

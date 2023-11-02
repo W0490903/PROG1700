@@ -109,4 +109,4 @@ while replay == "yes":
             print(f"You have no guesses left. The correct number was {bot_choice}.")
             break
 
-    replay = input("Play Again? (yes/no): ").lower()
+    replay = input("Play Again? (yes/no): ").lower().strip()
