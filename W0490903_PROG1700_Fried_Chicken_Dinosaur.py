@@ -8,7 +8,6 @@ Repository: https://github.com/W0490903/PROG1700/
 Programming Language: Python 3
 License: Creative Commons
 Version: 3.0
-Lines of Code: 22
 """
 
 # Assign global variables.
@@ -39,15 +38,8 @@ print(""" _____                                                 _____
 
 # Wraps code in a while loop, repeating the code execution as long as the condition is met.
 while friedchicken_remaining > 0:
-    # If it is the first day, the dinosaur only eats 1 pound.
-    if days == 1:
-        friedchicken_remaining = friedchicken_remaining - friedchicken_eaten
-        days += 1
-        print(f"It is day 1 and I'm Hungry. Let's Eat!\nChicken eaten today: {friedchicken_eaten:.2f}\nChicken remaining: {friedchicken_remaining:.2f}\n")
-        # Increment the amount the dinosaur eats after each day, except the seventh.
-        friedchicken_eaten += 0.05
     # On all other days except the seventh, the dinosaur eats 0.05 more than the previous day.
-    elif days > 1 and days != 7 and days != 16:
+    if days != 7 and days != 16:
         friedchicken_remaining = friedchicken_remaining - friedchicken_eaten
         print(f"It is day {days} and I'm Hungry. Let's Eat!\nChicken eaten today: {friedchicken_eaten:.2f}\nChicken remaining: {friedchicken_remaining:.2f}\n")
         friedchicken_eaten += 0.05
