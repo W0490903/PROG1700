@@ -15,7 +15,8 @@ friedchicken_remaining = 20
 friedchicken_eaten = 1
 days = 1
 
-print(""" _____                                                 _____ 
+print(r""" 
+ _____                                                 _____ 
 ( ___ )                                               ( ___ )
  |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   | 
  |   |  _______        __           __                 |   | 
@@ -56,7 +57,7 @@ while friedchicken_remaining > 0:
 # If the dinosaur runs out of chicken, prints the current day, and tells user that he has run out.
 if friedchicken_remaining <= 0:
     print(f"It is day {days}. and I have run out of fried chicken! Time to make some more!")
-    print("""\
+    print(r"""
                                                      ___._
                                                    .'  <0>'-.._
                                                   /  /.--.____")
