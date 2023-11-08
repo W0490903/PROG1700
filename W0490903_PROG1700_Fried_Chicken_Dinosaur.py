@@ -2,7 +2,7 @@
 Author: Zachary Mason
 Student ID: W0490903
 Course: PROG1700
-Date: 2023-10-30
+Date: 2023-11-08
 Project: Fried Chicken Dinosaur
 Repository: https://github.com/W0490903/PROG1700/
 Programming Language: Python 3
