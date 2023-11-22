@@ -14,19 +14,14 @@ import statistics
 
 # Create dictionary with names and scores.
 student_scores = {"Alice": 90, "Bob": 85, "Charlie": 78, "David": 92, "Eve": 88}
-highest_name = max(student_scores, key=student_scores.get)
-highest_score = student_scores[highest_name]
-
 
 # Print the dictionary. [1]
 def printdict():
     print(student_scores)
 
-
 # Print average scores. [2]
 def average_score():
     print("The average score is: ", statistics.mean(list(student_scores.values())))
-
 
 # Prompt user for student name, and check if student exists. [3]
 def user_search():
@@ -39,7 +34,7 @@ def user_search():
             print("No record exists. Please select a valid student!")
 
 # Prompt user for student name, check if it exists, then prompt user to input a new score. [4]
-def change_grade():
+def change_student_grade():
     user_search()
     while True:
         lowest_possible_score = 0
@@ -53,7 +48,7 @@ def change_grade():
             print("Please enter a valid score (0-100)!")
 
 # Displays the current names in the dictionary, then prompts user to input a student name to remove. [5]
-def remove_record():
+def remove_student_record():
     print("Current students:")
     for keys in student_scores.keys():
         print(keys)
@@ -71,19 +66,26 @@ def remove_record():
 
 # Displays the student with the highest score. [6]
 def print_highest_score():
+    highest_name = max(student_scores, key=student_scores.get)
+    highest_score = student_scores[highest_name]
     print(f"The student with the highest score is {highest_name} with a score of {highest_score}.")
-
 
 # Main
 while True:
-    selection = int(input(
+    selection = input(
 """\n[1] Display All Records
 [2] Display Average Score
 [3] Search Student Score
 [4] Change Student Grade
 [5] Remove Student Record
 [6] Display Highest Score\n
-Please make a selection (1-6): """))
+Please make a selection (1-6): """)
+    
+    if not selection.isdigit():
+        print("Please make a valid number! (1 - 6)")
+        continue
+    
+    selection = int(selection)
     
     if selection < 1 or selection > 6:
         print("\nPlease make a valid selection!")
@@ -94,8 +96,8 @@ Please make a selection (1-6): """))
     elif selection == 3:
         user_search()
     elif selection == 4:
-        change_grade()
+        change_student_grade()
     elif selection == 5:
-        remove_record()
+        remove_student_record()
     elif selection == 6:
         print_highest_score()
