@@ -82,7 +82,7 @@ while True:
 Please make a selection (1-6): """)
     
     if not selection.isdigit():
-        print("Please make a valid number! (1 - 6)")
+        print("Please select a valid number! (1-6)")
         continue
     
     selection = int(selection)
