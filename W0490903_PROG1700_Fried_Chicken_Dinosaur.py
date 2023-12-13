@@ -39,23 +39,24 @@ print(r"""
 
 # Wraps code in a while loop, repeating the code execution as long as the condition is met.
 while friedchicken_remaining > 0:
-    # On all other days except the seventh, the dinosaur eats 0.05 more than the previous day.
-    if days != 7 and days != 16:
+    
+    # On all other days except the seventh, the dinosaur eats 5% more than the previous amount.
+    if days != 7:
         friedchicken_remaining = friedchicken_remaining - friedchicken_eaten
         print(f"It is day {days} and I'm Hungry. Let's Eat!\nChicken eaten today: {friedchicken_eaten:.2f}\nChicken remaining: {friedchicken_remaining:.2f}\n")
-        friedchicken_eaten += 0.05
+        friedchicken_eaten *= 1.05
         days += 1
+        if friedchicken_eaten > friedchicken_remaining:
+            friedchicken_eaten = friedchicken_remaining
+
     # On the seventh day, the dinosaur does not eat any chicken.
-    elif days == 7:
+    else:
         days += 1
         print("It is day 7 and I have a tummy ache. I can't eat anything today.\n")
-    # On day sixteen, he eats the last of his chicken, so this sets the amount remaining to zero.
-    elif days == 16:
-        print("It is day 16 and I'm Hungry. Let's Eat!\nChicken eaten today: 1.45\nChicken remaining: 0\n")
-        friedchicken_remaining = 0
         
 # If the dinosaur runs out of chicken, prints the current day, and tells user that he has run out.
 if friedchicken_remaining <= 0:
+    days = days - 1
     print(f"It is day {days}. and I have run out of fried chicken! Time to make some more!")
     print(r"""
                                                      ___._
