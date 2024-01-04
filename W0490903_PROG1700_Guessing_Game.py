@@ -24,9 +24,12 @@ def get_bot_choice():
 
 # Define a function to determine the user's choice.
 def get_user_choice():
+    
     global invalid_attempts
+    
     while invalid_attempts < max_invalid_attempts:
         user_choice = input("Select a number between 1 and 10: ")
+        
         # Validate the user is inputting only the data type we desire.
         try:
             user_choice = int(user_choice)
@@ -34,24 +37,26 @@ def get_user_choice():
                 return user_choice
             else:
                 invalid_attempts += 1
-                print(
-                    f"Please choose a valid selection! Attempts left: {max_invalid_attempts - invalid_attempts}"
-                )
-        # Return an error if the data is wrong.
+                print(f"Please choose a valid selection! Attempts left: {max_invalid_attempts - invalid_attempts}")
+        
+        # Return an error if the data is incorrect.
         except ValueError:
             invalid_attempts += 1
-            print(
-                f"*Please choose a valid selection! Attempts left: {max_invalid_attempts - invalid_attempts}"
-            )
-            if invalid_attempts == max_invalid_attempts:
-                print("You have no attempts left. Thanks for Playing!")
-                exit()
+            print(f"Please choose a valid selection! Attempts left: {max_invalid_attempts - invalid_attempts}")
+            
+    if invalid_attempts == max_invalid_attempts:
+        print("You have no attempts left. Thanks for Playing!")
+        exit()
 
 # Define a function to determine the user's name.
 def get_user_name():
+    
     global invalid_attempts
+    
     while invalid_attempts < max_invalid_attempts:
+        
         user_name = input("What is your name?: ")
+        
         # Validate the user is inputting only the data type we desire.
         if user_name.isalpha():
             invalid_attempts = 0
@@ -65,7 +70,9 @@ def get_user_name():
 
 # Define a function to determine the outcome.
 def winner(user_choice, bot_choice):
+    
     global invalid_attempts
+    
     if user_choice is None:
         return "You have no attempts left."
     if user_choice == bot_choice:
@@ -84,19 +91,18 @@ replay = "yes"
 
 # Main Game Loop, runs as long as 'replay' is set to "yes".
 while replay == "yes":
-    invalid_attempts = 0
-    user_name = get_user_name()
-    if user_name is None:
-        break
-    
-    bot_choice = get_bot_choice()
-    print(f"Hello, {user_name}!")
     
     guesses = max_invalid_attempts
+    invalid_attempts = 0
+    user_name = get_user_name()
+    bot_choice = get_bot_choice()
     
+    print(f"Hello, {user_name}!")
     
     while True:
+        
         user_choice = get_user_choice()
+        
         if user_choice is not None:
             result = winner(user_choice, bot_choice)
             print(result)
